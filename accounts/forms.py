@@ -28,3 +28,9 @@ class SignupForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ["full_name"]
